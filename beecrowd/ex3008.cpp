@@ -11,8 +11,6 @@ int solve(int n){
 	return s[n] = mod(mod(mod(mod(mod(solve(n-2), solve(n-3)),solve(n-4)),3 *solve(n-5)),(3*solve(n-6))),solve(n-7));	
 }
 
-//return s[n] = ((((((((((solve(n-2) % M+solve(n-3) % M) % M)+solve(n-4) % M)%M)+(3 *solve(n-5)) % M)%M)+(3*solve(n-6)) % M)%M)+solve(n-7) % M)%M);
-
 int main(){
 	int t, n;
 	cin >> t;
@@ -21,8 +19,7 @@ int main(){
 		for(int i=8; i<=n; i++) s[i] = -1;
 		solve(n);
 		if (n <= 7) cout << s[n] << endl;
-		else cout << s[n] + s[n-6]<< endl;
-		for(int i=8; i<=n; i++) cout << s[i] - s[i-6] << endl;
+		else cout << (s[n] - s[n-6] + 1000007) % M<< endl;
 	}
 	return 0;
 }
