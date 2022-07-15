@@ -5,8 +5,11 @@ using namespace std;
 int ME[20001], MD[20001];
 
 int solve(int n){
-	if (n == 1) return 0;
 	int l1, r1, li, ri, ln, rn, i;
+	if (n == 1){
+		cin >> li >> ri;
+		return 0;
+	}
 	cin >> l1 >> r1;
 	ME[1] =  2*r1 - l1 -1;
 	MD[1] =  r1-1;
