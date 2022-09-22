@@ -1,7 +1,3 @@
-/* 
-In this solution I used the Hungarian Algorithm
-I copied the algorithm from https://www.geeksforgeeks.org/hungarian-algorithm-assignment-problem-set-1-introduction/
-*/
 #include<bits/stdc++.h>
 #include <iostream>
 using namespace std;
